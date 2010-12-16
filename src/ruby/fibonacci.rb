@@ -27,4 +27,12 @@ module Fibonacci
   def self.phi
     (1.0 + Math.sqrt(5)) / 2
   end
+
+	def self.cool(size)
+		x1,x2 = 0, 1   
+    0.upto(size){
+			puts x1; x1+=x2; x1,x2= x2,x1
+		} # note the swap for the next iteration		
+	end
+	
 end
