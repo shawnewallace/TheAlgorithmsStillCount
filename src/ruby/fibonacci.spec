@@ -3,20 +3,6 @@ gem 'rspec'
 require 'fibonacci'
 
 describe Fibonacci do
-=begin
-  it "should be 0 if 0" do
-    Fibonacci.of(0).should == 0
-  end
-  
-  it 'should be 1 if 1' do
-    Fibonacci.of(1).should == 1
-  end
-  
-  it 'should be 1 if 2' do
-    Fibonacci.of(2).should == 1
-  end
-=end
-  
   [
     [0, 0],
     [1, 1],
@@ -32,11 +18,7 @@ describe Fibonacci do
       #Fibonacci.ofIterative(fib).should == expected
       #Fibonacci.ofRecursion(fib).should == expected
       Fibonacci.of(fib).should == expected
+      #Fibonacci.cool(fib).should == expected
     end
-  end
-  
-  it "PHI should be about 1.61" do
-      Fibonacci.phi().should > 1.61
-      Fibonacci.phi().should < 1.62
   end
 end
