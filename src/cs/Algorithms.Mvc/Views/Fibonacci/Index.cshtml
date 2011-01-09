@@ -1,0 +1,63 @@
+﻿@model Algorithms.Mvc.Models.FibonacciViewModel
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<h2>
+    Fibonacci Algorithm Comparison</h2>
+<form action="/Fibonacci/Calculate" method="post">
+    <fieldset>
+        <legend>Options</legend>
+
+        Calculate: Iteratively
+        @Html.CheckBoxFor(m => m.CallIteratively)
+        &nbsp;&nbsp; Big O(1) @Html.CheckBoxFor(m => m.CallO1)
+        &nbsp;&nbsp; Recursively @Html.CheckBoxFor(m => m.CallRecursively)
+        &nbsp;&nbsp;
+        Calculate how many? @Html.TextBoxFor(m => m.NumToCalculate)
+        <div>Show short list? @Html.CheckBoxFor(m => m.ShowShortList)</div>
+        <p>
+            <input type="submit" value="Submit" />
+        </p>
+    </fieldset>
+</form>
+
+<fieldset>
+    <legend>Results</legend>
+    <table>
+        <tr>
+            <th><em>N</em></th>
+            <th>Value</th>
+            @if (Model.CallIteratively) {
+                <th colspan="2">Iterative</th>
+            }
+            @if (Model.CallO1) {
+                <th colspan="2">O(1)</th>
+            }
+            @if (Model.CallRecursively)
+            {
+                <th colspan="2">Recursion</th>
+            }
+        </tr>
+        @foreach (var item in Model.Results)
+        {
+            <tr>
+                <td>@item.Num</td>
+                <td>@item.Value</td>
+                @if (Model.CallIteratively) {
+                    <td>@item.IterativeAccuracy</td>
+                    <td>@item.IterativelyTicks</td>
+                }
+                @if (Model.CallO1) {
+                    <td>@item.BigO1Accuracy</td>
+                    <td>@item.BigO1Ticks</td>
+                }
+                @if (Model.CallRecursively)
+                {
+                    <td>@item.RecursiveAccuracy</td>
+                    <td>@item.RecursivelyTicks</td>
+                }
+            </tr>
+        }
+    </table>
+</fieldset>

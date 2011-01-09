@@ -13,8 +13,8 @@ namespace Algorithms
 
             var stopwatch = new Stopwatch();
 
-            DelegateComparison();
-            //FibonacciComparison();
+            //DelegateComparison();
+            FibonacciComparison();
             //ConcatComparison(stopwatch);
 
             Console.WriteLine("...Done");
@@ -125,7 +125,7 @@ namespace Algorithms
 
             double iterResult;
             double phiResult;
-            for (var i = 1; i <= 50; i++)
+            for (var i = 1; i <= 100; i++)
             {
                 sw.Reset();
                 sw.Start();
