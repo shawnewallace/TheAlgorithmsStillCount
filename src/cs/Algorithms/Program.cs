@@ -14,8 +14,8 @@ namespace Algorithms
             var stopwatch = new Stopwatch();
 
             //DelegateComparison();
-            FibonacciComparison();
-            //ConcatComparison(stopwatch);
+            //FibonacciComparison();
+            ConcatComparison(stopwatch);
 
             Console.WriteLine("...Done");
             Console.ReadLine();
@@ -43,7 +43,7 @@ namespace Algorithms
             sw.Reset();
             sw.Start();
             result = "Initial - ";
-            for (int i = 0; i < 10; i++)
+            for (int i = 0; i < 50; i++)
             {
                 result = string.Format("{0}{1}", result, i.ToString());
             }
@@ -57,7 +57,7 @@ namespace Algorithms
             sw.Reset();
             sw.Start();
             result = "Initial - ";
-            for (int i = 0; i < 10; i++)
+            for (int i = 0; i < 50; i++)
             {
                 result += i.ToString();
             }
@@ -72,7 +72,7 @@ namespace Algorithms
             sw.Reset();
             sw.Start();
             sb = new StringBuilder("Initial - ");
-            for (int i = 0; i < 10; i++)
+            for (int i = 0; i < 50; i++)
             {
                 sb.Append(i.ToString());
             }

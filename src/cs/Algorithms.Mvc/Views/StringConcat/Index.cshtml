@@ -1,0 +1,39 @@
+﻿@model Algorithms.Mvc.Models.StringConcatViewModel
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<h2>
+    Index</h2>
+<form action="/StringConcat/Combine" method="post">
+<fieldset>
+    <legend>Options</legend>How many strings to join? @Html.TextBoxFor(m => m.NumToConcat)
+    <p>
+        <input type="submit" value="Submit" />
+    </p>
+</fieldset>
+</form>
+
+<fieldset>
+    <legend>Results</legend>
+    <table>
+        <tr>
+            <td>&nbsp;</td>
+            <td>Concat</td>
+            <td>StringBuilder</td>
+            <td>string.Format</td>
+        </tr>
+        <tr>
+            <td>Join Two Strings</td>
+            <td>@Model.ConcatTicks</td>
+            <td>@Model.StringBuilderTicks</td>
+            <td>@Model.StringFormatTicks</td>
+        </tr>
+        <tr>
+            <td>Join @Model.NumToConcat Strings</td>
+            <td>@Model.ConcatMultipleTicks</td>
+            <td>@Model.StringBuilderMultipleTicks</td>
+            <td>@Model.StringFormatMultipleTicks</td>
+        </tr>
+    </table>
+</fieldset>
