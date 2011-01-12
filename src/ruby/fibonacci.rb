@@ -1,13 +1,13 @@
 module Fibonacci
   def self.ofIterative(fib)
-    a = 0
-    b = 1
+    old = 0
+    new = 1
 
     fib.times do |i|
-      a, b = b, a + b
+      old, new = new, old + new
     end
 
-    return a
+    return old
   end
   
   def self.ofRecursion(fib)
@@ -25,12 +25,5 @@ module Fibonacci
   def self.phi
     @phi ||= (1.0 + Math.sqrt(5)) / 2
   end
-
-	def self.cool(size)
-		a,b = 0, 1   
-    0.upto(size){
-			puts a; a+=b; a,b= b,a
-		} # note the swap for the next iteration		
-	end
 	
 end
