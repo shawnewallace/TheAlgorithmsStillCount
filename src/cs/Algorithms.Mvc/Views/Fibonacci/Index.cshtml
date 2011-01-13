@@ -26,8 +26,8 @@
     <legend>Results</legend>
     <table>
         <tr>
-            <th><em>N</em></th>
-            <th>Value</th>
+            <th></th>
+            <th></th>
             @if (Model.CallIteratively) {
                 <th colspan="2">Iterative</th>
             }
@@ -39,16 +39,36 @@
                 <th colspan="2">Recursion</th>
             }
         </tr>
+        <tr>
+            <th><em>N</em></th>
+            <th>Value</th>
+            @if (Model.CallIteratively) {
+                <th>accuracy</th>
+                <th>ticks</th>
+            }
+            @if (Model.CallO1)
+            {
+                <th>accuracy</th>
+                <th>ticks</th>
+            }
+            @if (Model.CallRecursively)
+            {
+                <th>accuracy</th>
+                <th>ticks</th>
+            }
+        </tr>
         @foreach (var item in Model.Results)
         {
             <tr>
                 <td>@item.Num</td>
                 <td>@item.Value</td>
-                @if (Model.CallIteratively) {
+                @if (Model.CallIteratively)
+                {
                     <td>@item.IterativeAccuracy</td>
                     <td>@item.IterativelyTicks</td>
                 }
-                @if (Model.CallO1) {
+                @if (Model.CallO1)
+                {
                     <td>@item.BigO1Accuracy</td>
                     <td>@item.BigO1Ticks</td>
                 }

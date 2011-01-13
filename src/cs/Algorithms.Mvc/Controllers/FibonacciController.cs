@@ -4,6 +4,7 @@ using System.Diagnostics;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using Algorithms.Lib;
 using Algorithms.Mvc.Models;
 
 namespace Algorithms.Mvc.Controllers

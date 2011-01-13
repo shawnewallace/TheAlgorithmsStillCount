@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Text;
+using Algorithms.Lib;
 
 namespace Algorithms
 {
