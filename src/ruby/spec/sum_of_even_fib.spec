@@ -1,5 +1,3 @@
-require 'rubygems'
-gem 'rspec'
 require 'sum_of_even_fib'
 
 describe Fibonacci do
