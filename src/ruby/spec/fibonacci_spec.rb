@@ -19,15 +19,15 @@ describe Fibonacci do
     end
   end
 
-  @values.each do |fib, expected|
-    it "should be #{expected} if #{fib} computed recursively" do
-      #Fibonacci.ofRecursion(fib).should == expected
-    end
-  end
+  # @values.each do |fib, expected|
+  #   it "should be #{expected} if #{fib} computed recursively" do
+  #     #Fibonacci.ofRecursion(fib).should == expected
+  #   end
+  # end
 
-  @values.each do |fib, expected|
-    it "should be #{expected} if #{fib} computed optimally" do
-      Fibonacci.of(fib).should == expected
-    end
-  end
+  # @values.each do |fib, expected|
+  #   it "should be #{expected} if #{fib} computed optimally" do
+  #     Fibonacci.of(fib).should == expected
+  #   end
+  # end
 end
