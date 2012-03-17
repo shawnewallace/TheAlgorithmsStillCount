@@ -18,16 +18,16 @@ describe Fibonacci do
       Fibonacci.ofIterative(fib).should == expected
     end
   end
-# 
-#   @values.each do |fib, expected|
-#     it "is #{expected} for fib(#{fib}) computed recursively" do
-#       #Fibonacci.ofRecursion(fib).should == expected
-#     end
-#   end
-# 
-#   @values.each do |fib, expected|
-#     it "is #{expected} for fib(#{fib}) computed using O(1) calculation" do
-#       Fibonacci.of(fib).should == expected
-#     end
-#   end
+
+  # @values.each do |fib, expected|
+  #   it "is #{expected} for fib(#{fib}) computed recursively" do
+  #     Fibonacci.ofRecursion(fib).should == expected
+  #   end
+  # end
+
+  @values.each do |fib, expected|
+    it "is #{expected} for fib(#{fib}) computed using O(1) calculation" do
+      Fibonacci.of(fib).should == expected
+    end
+  end
 end
